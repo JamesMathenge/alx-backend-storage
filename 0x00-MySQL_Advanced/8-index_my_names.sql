@@ -6,7 +6,6 @@
 
 -- Import the table dump
 -- Note: Adjust the path to the names.sql file as needed
-SOURCE /path/to/names.sql;
-
--- Create an index idx_name_first on the first letter of 'name'
-CREATE INDEX idx_name_first ON names (LEFT(name, 1));
+-- creates an index idx_name_first on the table names and the first letter of name
+CREATE INDEX idx_name_first
+ON names (name(1));
